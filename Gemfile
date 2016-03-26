@@ -34,6 +34,7 @@ gem 'font-awesome-rails'
 gem 'font-kit-rails', '~> 1.2.0'
 
 gem 'tzinfo-data'
+gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
