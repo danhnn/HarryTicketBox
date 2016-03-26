@@ -36,6 +36,7 @@ gem 'font-kit-rails', '~> 1.2.0'
 gem 'tzinfo-data'
 gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
 
+
 # Use Unicorn as the app server
 # gem 'unicorn'
 
@@ -48,6 +49,8 @@ group :development, :test do
 end
 
 group :development do
+	gem 'rb-fsevent', :require => false if RUBY_PLATFORM =~ /darwin/i
+	gem 'guard-rspec'
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
 
