@@ -53,6 +53,7 @@ GEM
       sass (>= 3.4.19)
     builder (3.2.2)
     byebug (8.2.1)
+    cocoon (1.2.9)
     coderay (1.1.0)
     coffee-rails (4.1.0)
       coffee-script (>= 2.2.0)
@@ -246,6 +247,7 @@ DEPENDENCIES
   better_errors
   bootstrap (~> 4.0.0.alpha3)
   byebug
+  cocoon
   coffee-rails (~> 4.1.0)
   devise
   font-awesome-rails

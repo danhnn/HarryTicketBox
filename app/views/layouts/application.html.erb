@@ -29,10 +29,21 @@
     </ul>
   </nav>  
 
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <div class="container">
 
-  <%= yield %>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <% if flash[:error] %>
+    <div class="alert alert-danger"><%= flash[:error] %></div>
+    <% end %>
+
+    <% if flash[:success] %>
+    <div class="alert alert-success"><%= flash[:success] %></div>
+    <% end %>
+
+    <%= yield %>
+  </div>
 
 </body>
 </html>

@@ -34,6 +34,7 @@ gem 'font-kit-rails', '~> 1.2.0'
 gem 'tzinfo-data'
 gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
 gem 'devise'
+gem "cocoon"
 # Use Unicorn as the app server
 # gem 'unicorn'
 

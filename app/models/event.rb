@@ -5,6 +5,7 @@ class Event < ActiveRecord::Base
 
   validates_presence_of :extended_html_description, :venue, :category, :starts_at
   validates_uniqueness_of :name, uniqueness: {scope: [:venue, :starts_at]}
+  accepts_nested_attributes_for :ticket_types, allow_destroy: true
 
   def venue_name
   	venue ? venue.name : nil 
