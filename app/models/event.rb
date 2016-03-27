@@ -10,9 +10,8 @@ class Event < ActiveRecord::Base
   	venue ? venue.name : nil 
   end
 
-  def self.upcoming
-  	where("ends_at >= ?",Time.zone.now.beginning_of_day)
-    #where('extract(year from ends_at) = ?', 2016)
-    #where("ends_at >= TIMESTAMP 'now'")
+  def self.upcoming(name)
+    name = name.present? ? name : ""
+  	where("ends_at >= ? and LOWER(name) LIKE ?",Time.zone.now.beginning_of_day,"%#{name.downcase}%")
   end
 end
