@@ -11,16 +11,28 @@
   <nav class="navbar navbar-fixed-top navbar-dark bg-inverse">
     <a class="navbar-brand" href="<%= root_path %>">Coder Ticket</a>
     <ul class="nav navbar-nav">
+     
+      <% if user_signed_in? %>
       <li class="nav-item">
-        <a class="nav-link" href="#">Log In</a>
+        <%= link_to "Log out",destroy_user_session_path,class: "nav-link",method: 'delete'  %>
+      </li>
+      <% else %>
+      <li class="nav-item">
+        <%= link_to "Log In",new_user_session_path,class: "nav-link"  %>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Sign Up</a>
+        <%= link_to "Sign up",new_user_registration_path,class: "nav-link"  %>
       </li>
+      <% end %>
+      
+      
     </ul>
   </nav>  
 
-<%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
+  <%= yield %>
 
 </body>
 </html>
