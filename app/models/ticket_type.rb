@@ -8,4 +8,5 @@ class TicketType < ActiveRecord::Base
   		errors.add(:base, "Cannot have duplicates")
   	end
   end
+
 end
