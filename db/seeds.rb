@@ -2,10 +2,13 @@
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 #
 
+
+
 # Create Regions
 ['Ho Chi Minh', 'Ha Noi', 'Binh Thuan', 'Da Nang', 'Lam Dong'].each do |r|
   Region.create(name: r)
 end
+
 # Create Categories
 ['Entertainment', 'Learning', 'Everything Else'].each do |c|
   Category.create(name: c)
@@ -22,8 +25,8 @@ dalat = Venue.create({
 
 e = Event.create({
   name: 'Việt Nam Thử Thách Chiến Thắng', 
-  starts_at: DateTime.parse('Fri, 11 Mar 2016 7:00 AM+0700'),
-  ends_at: DateTime.parse('Sun, 13 Mar 2016 3:00 PM+0700'),
+  starts_at: DateTime.parse('Fri, 12 Mar 2016 7:00 AM+0700'),
+  ends_at: DateTime.parse('Sun, 31 Mar 2016 3:00 PM+0700'),
   venue: dalat,
   category: Category.find_by(name: 'Everything Else'),
   hero_image_url: 'https://az810747.vo.msecnd.net/eventcover/2015/10/25/C6A1A5.jpg?w=1040&maxheight=400&mode=crop&anchor=topcenter',
