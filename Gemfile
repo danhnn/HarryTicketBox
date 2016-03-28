@@ -32,7 +32,7 @@ gem 'font-awesome-rails'
 gem 'font-kit-rails', '~> 1.2.0'
 
 gem 'tzinfo-data'
-gem 'rspec-rails', '~> 3.4', '>= 3.4.2'
+
 gem 'devise'
 gem "cocoon"
 # Use Unicorn as the app server
@@ -43,7 +43,16 @@ gem "cocoon"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem "factory_girl_rails"
+  gem 'faker'
   gem 'byebug'
+
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'simplecov'
 end
 
 group :development do

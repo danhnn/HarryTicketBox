@@ -1,5 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe Ticket, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+	context "Users cannot buy more tickets than the quantity available" do
+		it "should buy 5 only" do
+			ticket = build(:ticket)   
+			ticket.custom_save
+			expect(ticket.ticket_type.max_quantity).to eq 5 
+		end
+	end
+
 end

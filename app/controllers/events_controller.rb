@@ -14,7 +14,7 @@ class EventsController < ApplicationController
 
   def new
   	@event = Event.new
-  	#@event.ticket_types.build
+  	@event.ticket_types.build
   end
   
   def create
@@ -28,7 +28,7 @@ class EventsController < ApplicationController
 		  render :new
   	end	
   end
-
+ 
   def set_publish
     @event = Event.find(params[:id])
     @event.published = true

@@ -24,7 +24,7 @@ RSpec.describe EventsController, type: :controller do
 
 		it "load the correct event" do
 			get :show, id: @event_slug
-			expect(assigns(:event)).to eq @event
+			expect(assigns(:event)).to eq @event 
 
 		end
 
