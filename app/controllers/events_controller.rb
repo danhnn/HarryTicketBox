@@ -29,6 +29,18 @@ class EventsController < ApplicationController
   	end	
   end
 
+  def set_publish
+    @event = Event.find(params[:id])
+    @event.published = true
+    if @event.save
+      flash[:success] = "Event has been published"
+      redirect_to user_events_path
+    else
+      flash[:error] = "Error: #{@event.errors.full_messages.to_sentence}"
+      #redirect_to new_event_path
+    end 
+  end
+
   def edit
    
   end

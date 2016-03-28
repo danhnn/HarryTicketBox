@@ -28,6 +28,7 @@ e = Event.create({
   starts_at: DateTime.parse('Fri, 12 Mar 2016 7:00 AM+0700'),
   ends_at: DateTime.parse('Sun, 15 Apr 2016 3:00 PM+0700'),
   venue: dalat,
+  published: true,
   category: Category.find_by(name: 'Everything Else'),
   hero_image_url: 'https://az810747.vo.msecnd.net/eventcover/2015/10/25/C6A1A5.jpg?w=1040&maxheight=400&mode=crop&anchor=topcenter',
   extended_html_description: <<-DESC
@@ -54,6 +55,7 @@ dan_venue = Venue.create({
 e = Event.create({
   name: 'Cảm ơn Đời - Live Concert Đan Trường', 
   venue: dan_venue,
+  published: true,
   category: Category.find_by(name: 'Entertainment'),
   starts_at: DateTime.parse('Sat, 16 Jan 2016, 8:00 PM+0700'),
   ends_at: DateTime.parse('Sat, 15 Apr 2016, 10:30 PM+0700'),  
@@ -139,6 +141,7 @@ e = Event.create({
   starts_at: DateTime.parse('Thu, 24 Dec 2015, 8:00 PM+0700'),
   ends_at: DateTime.parse('Thu, 24 Dec 2015, 11:00 PM+0700'),
   venue: gap,
+  published: true,
   category: Category.find_by(name: 'Entertainment'),
   hero_image_url:'https://az810747.vo.msecnd.net/eventcover/2015/12/12/78534E.jpg?w=1040&maxheight=400&mode=crop&anchor=topcenter',
   extended_html_description: <<-DESC

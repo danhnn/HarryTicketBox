@@ -4,9 +4,10 @@ Rails.application.routes.draw do
 
   get 'user_events' => "events#get_user_events"
   get 'user_tickets' => "tickets#user_tickets"
-
+ 
   resources :events do
     resources :tickets
+    get 'set_publish', on: :member
   end
   
   # The priority is based upon order of creation: first created -> highest priority.
