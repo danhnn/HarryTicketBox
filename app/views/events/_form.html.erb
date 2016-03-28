@@ -12,11 +12,11 @@
 <div id="tickets">
 	<%= f.simple_fields_for :ticket_types do |ticket_type| %>
 	<%= render 'ticket_type_fields', f: ticket_type %>
-	<div class="links">
-		<%= link_to_add_association 'Add ticket', f, :ticket_types %>
-	</div>
-
 	<% end %>
+</div>
+
+<div class="links">
+		<%= link_to_add_association 'Add ticket', f, :ticket_types %>
 </div>
 
 <% if @event.new_record? %>  

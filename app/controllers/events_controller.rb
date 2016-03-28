@@ -14,7 +14,7 @@ class EventsController < ApplicationController
 
   def new
   	@event = Event.new
-  	@event.ticket_types.build
+  	#@event.ticket_types.build
   end
   
   def create
@@ -48,7 +48,7 @@ class EventsController < ApplicationController
     
     if @event.update(event_params)
       flash[:success] = "Create event success"
-      redirect_to root_path
+      redirect_to user_events_path
     else
       flash.now[:error] = "Error: #{@event.errors.full_messages.to_sentence}"
       render :edit
