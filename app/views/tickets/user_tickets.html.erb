@@ -1,25 +1,27 @@
-<h1>Your ticket</h1>
+<div class="container">
+<h1 style="background-color: #dd7b1f;margin-top: 20px;color:white;padding: 10px 0px 10px 0px;text-align: center;">YOUR TICKET:</h1>
 
-<table class="table">
-  <thead class="thead-inverse">
+  <table class="table" style="margin-top: 20px">
+    <thead class="thead-inverse">
+     <tr>
+      <th>#</th>
+      <th> Ticket Name </th>
+      <th> Date Bought </th>
+      <th> Unit Price </th>
+      <th> Quantity </th>
+    </tr>
+  </thead>
+
+  <tbody>
+   <% @tickets.each.with_index do |ticket,i| %>
    <tr>
-    <th>#</th>
-    <th> Ticket Name </th>
-    <th> Date Bought </th>
-    <th> Unit Price </th>
-    <th> Quantity </th>
-  </tr>
-</thead>
-
-<tbody>
- <% @tickets.each.with_index do |ticket,i| %>
- <tr>
-   <td><%= i+1 %></td>
-   <td> <%= ticket.ticket_type.name %> </td>
-   <td> <%= ticket.created_at %> </td>
-   <td> <%= number_to_currency(ticket.ticket_type.price, unit: 'VND ', precision: 0) %> </td>
-   <td> <%= ticket.quantity %> </td>
- </tr>
- <% end %> 
-</tbody>
+     <td><%= i+1 %></td>
+     <td> <%= ticket.ticket_type.name %> </td>
+     <td> <%= ticket.created_at.strftime("%A, %B %d, %H:%M") %> </td>
+     <td> <%= number_to_currency(ticket.ticket_type.price, unit: 'VND ', precision: 0) %> </td>
+     <td> <%= ticket.quantity %> </td>
+   </tr>
+   <% end %> 
+ </tbody>
 </table>
+</div>

@@ -1,5 +1,5 @@
 <div class="container">
-	<h1>This is your events:</h1>
+	<h1 style="background-color: #587de2;margin-top: 20px;color:white;padding: 10px 0px 10px 0px;text-align: center;">YOUR EVENT:</h1>
 
 	<div class="table" style="margin-top: 20px;">
 		<div class="row thead" style="padding: 10px 0px 10px 0px;background-color: black;color:white;">
@@ -16,7 +16,7 @@
 		<div class="row" style="padding-top: 10px;">
 			<div class="col-sm-1"><%= i + 1 %></div>
 			<div class="col-sm-4"><%= event.name %></div>
-			<div class="col-sm-3"><%= event.created_at  %></div>
+			<div class="col-sm-3"><%= event.created_at.strftime("%A, %B %d, %H:%M")  %></div>
 			<% if event.published %>
 				<div class="col-sm-2">YES</div>
 			<% else %>

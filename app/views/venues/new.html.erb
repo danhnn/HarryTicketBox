@@ -1,10 +1,11 @@
-
-<h1>Let create new venues:</h1>
+<div class="container">
+<h1 style="background-color: #4dba12;color:white;padding: 10px;text-align: center;">NEW VENUE</h1>
 
 <%= simple_form_for(@venue) do |f| %>
 		<%= f.input :name %>
 		<%= f.input :full_address %>
 		<%= f.association :region,selected: 1 %>
-		<%= f.submit %>
+		<%= f.button :submit, "Create",class: 'btn btn-primary' %>
 <% end %>
+</div>
   

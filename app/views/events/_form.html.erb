@@ -8,21 +8,23 @@
 <%= f.input :starts_at %>
 <%= f.input :ends_at %>
 
-<h3>Tickets</h3>
-<div id="tickets">
-	<%= f.simple_fields_for :ticket_types do |ticket_type| %>
-	<%= render 'ticket_type_fields', f: ticket_type %>
-	<% end %>
-</div>
+<div class="ticket-div" style="border: 1px gray dotted;padding:10px;">
+	<h3 style="background-color: #8cc603;color:white;padding: 10px;text-align: center;">Tickets</h3>
+	<div id="tickets">
+		<%= f.simple_fields_for :ticket_types do |ticket_type| %>
+		<%= render 'ticket_type_fields', f: ticket_type %>
+		<% end %>
+	</div>
 
-<div class="links">
-		<%= link_to_add_association 'Add ticket', f, :ticket_types %>
+	<div class="links">
+		<%= link_to_add_association 'Add ticket', f, :ticket_types, class: 'btn btn-primary' %>
+	</div>
 </div>
 
 <% if @event.new_record? %>  
-	<%= f.button :submit, "Create", class: "my-button" %>
+<%= f.button :submit, "Create", class: "btn btn-success",style: "width:100%; margin-top:20px;margin-bottom:30px;" %>
 <% else %>                      
-	<%= f.button :submit, "Update", class: "my-button" %>  
+<%= f.button :submit, "Update", class: "btn btn-success",style: "width:100%; margin-top:20px;margin-bottom:30px;"  %>  
 <% end %>
 
 
