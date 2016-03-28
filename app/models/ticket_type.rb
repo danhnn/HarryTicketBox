@@ -5,6 +5,7 @@ class TicketType < ActiveRecord::Base
   validates :max_quantity, numericality: { only_integer: true, greater_than_or_equal_to: 0 }
 
   before_create :check_duplicates
+ 
 
   def check_duplicates
   	if TicketType.exists?(event: event, price: price)
