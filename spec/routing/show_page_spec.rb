@@ -6,6 +6,6 @@ RSpec.describe "routing to event page", :type => :routing do
       :controller => "events",
       :action => "show",
       :id => "1-britney-spears"
-    )
+    ) 
   end
 end
