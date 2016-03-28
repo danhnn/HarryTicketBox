@@ -1,47 +1,47 @@
-# Homework 3 - *Name of App*
+# Homework 3 - *Harry Ticketbox*
 
-**Name of your app** is a Ruby on Rails blog application that allows users to create and buy tickets to cool events. 
+**Harry Ticketbox** is a Ruby on Rails blog application that allows users to create and buy tickets to cool events. 
 
-Submitted by: **Your Name Here**
+Submitted by: **Nguyễn Ngọc Danh (Harry)**
 
 Time spent: **X** hours
 
-URL: **Insert your Heroku URL here**
+URL: **https://harry-ticketbox.herokuapp.com/**
 
-SimpleCov Test Coverage: **Insert percentage or link to report here**
+SimpleCov Test Coverage: **https://github.com/harry-nguyen-88/HarryTicketBox/blob/master/coverage/index.html**
 
 ## User Stories
 
 The following **required** functionality is complete:
 
-* [ ] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
+* [x] 10 model tests, 2 route tests, 2 controller tests, 2 view tests.
 
 #### Events
 
-* [ ] Users can see a list of upcoming events. Past events should not be shown. **HINT**: Good candidate for a test.
-* [ ] Users can search for events from the homepage.
-* [ ] Users can click on an event to see details about the event. 
-* [ ] Users can click on "Book Now" to go to a page to purchase tickets.
+* [x] Users can see a list of upcoming events. Past events should not be shown. **HINT**: Good candidate for a test.
+* [x] Users can search for events from the homepage.
+* [x] Users can click on an event to see details about the event. 
+* [x] Users can click on "Book Now" to go to a page to purchase tickets.
 
 #### Tickets
 
 * [x] Each event can have multiple types of tickets, each with a different `price` and `max_quantity`. 
-* [ ] Users can buy tickets to an event, choose the types of tickets, and the quantity of tickets.
-* [ ] Users cannot buy more tickets than the quantity available.
-* [ ] Users can only buy up to 10 of a ticket type at a time.
-* [ ] Users cannot buy tickets to events that occur in the past. 
+* [x] Users can buy tickets to an event, choose the types of tickets, and the quantity of tickets.
+* [x] Users cannot buy more tickets than the quantity available.
+* [x] Users can only buy up to 10 of a ticket type at a time.
+* [x] Users cannot buy tickets to events that occur in the past. 
 
 #### Users
 
-* [ ] User can sign up by providing their email, password, and name. 
-* [ ] User can login using an email and password. 
-* [ ] Users can create events. 
-* [ ] Users must click "publish event" before an event becomes viewable to other users. 
-* [ ] Users can create ticket types for that event. 
-* [ ] Users can create venues.
-* [ ] An event must have at least one `ticket_type` defined before it can be published. 
-* [ ] User can see a list of events he or she has created.
-* [ ] Users can edit their event after creation. But only the user who created the event can edit the event. 
+* [x] User can sign up by providing their email, password, and name. 
+* [x] User can login using an email and password. 
+* [x] Users can create events. 
+* [x] Users must click "publish event" before an event becomes viewable to other users. 
+* [x] Users can create ticket types for that event. 
+* [x] Users can create venues.
+* [x] An event must have at least one `ticket_type` defined before it can be published. 
+* [x] User can see a list of events he or she has created.
+* [x] Users can edit their event after creation. But only the user who created the event can edit the event. 
 
 ### Optional Stories
 
@@ -56,6 +56,14 @@ The following **required** functionality is complete:
 ## Notes
 
 Describe any challenges encountered while building the app.
+
+## Video Walkthrough
+
+Here's a walkthrough of implemented user stories:
+
+![Video Walkthrough](blog_feature.gif)
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 ## License
 
