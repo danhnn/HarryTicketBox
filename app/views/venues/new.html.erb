@@ -1,0 +1,10 @@
+
+<h1>Let create new venues:</h1>
+
+<%= simple_form_for(@venue) do |f| %>
+		<%= f.input :name %>
+		<%= f.input :full_address %>
+		<%= f.association :region,selected: 1 %>
+		<%= f.submit %>
+<% end %>
+  
