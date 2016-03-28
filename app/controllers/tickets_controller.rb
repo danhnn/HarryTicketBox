@@ -13,7 +13,7 @@ class TicketsController < ApplicationController
   def create
     @ticket = current_user.tickets.build(ticket_params)
 
-    if @ticket.save
+    if @ticket.custom_save
       flash[:success] = "Buy ticket success"
       redirect_to new_event_ticket_path @event 
     else

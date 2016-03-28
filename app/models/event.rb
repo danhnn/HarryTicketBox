@@ -16,4 +16,5 @@ class Event < ActiveRecord::Base
     name = name.present? ? name : ""
   	where("ends_at >= ? and LOWER(name) LIKE ?",Time.zone.now.beginning_of_day,"%#{name.downcase}%")
   end
+
 end

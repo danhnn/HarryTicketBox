@@ -36,7 +36,7 @@
         <%= f.input :ticket_type_id,input_html: { value: ticket_type.id }, as: :hidden %>
         <div class="col-sm-5"> <%= ticket_type.name %> </div>
         <div class="col-sm-3"> <%= number_to_currency(ticket_type.price, unit: 'VND ', precision: 0) %> </div>
-        <div class="col-sm-2"><%= f.input :quantity, collection: 1..ticket_type.max_quantity,selected: 0,label: false %></div> 
+        <div class="col-sm-2"><%= f.input :quantity, collection: 1..ticket_type.quantity_show_in_combobox,selected: 0,label: false %></div> 
         <div class="col-sm-2"><%= f.button :submit, 'Buy',class: "btn btn-success btn-block" %></div>
 
       </div>

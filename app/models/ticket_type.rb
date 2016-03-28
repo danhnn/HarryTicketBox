@@ -6,6 +6,9 @@ class TicketType < ActiveRecord::Base
 
   before_create :check_duplicates
  
+  def quantity_show_in_combobox
+    max_quantity > 10 ? 10 : max_quantity
+  end
 
   def check_duplicates
   	if TicketType.exists?(event: event, price: price)
