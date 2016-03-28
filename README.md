@@ -4,11 +4,11 @@
 
 Submitted by: **Nguyễn Ngọc Danh (Harry)**
 
-Time spent: **X** hours
+Time spent: **18** hours
 
 URL: **https://harry-ticketbox.herokuapp.com/**
 
-SimpleCov Test Coverage: **https://github.com/harry-nguyen-88/HarryTicketBox/blob/master/coverage/index.html**
+SimpleCov Test Coverage: **92.61% covered at 1.16 hits/line**
 
 ## User Stories
 
