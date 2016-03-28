@@ -12,6 +12,7 @@ class VenuesController < ApplicationController
   		redirect_to new_event_path
   	else
 		flash[:error] = "Error: #{@venue.errors.full_messages.to_sentence}"
+		render :new
   	end
   end
 

@@ -22,10 +22,10 @@ class EventsController < ApplicationController
 
   	if @event.save
   		flash[:success] = "Create event success"
-  		redirect_to root_path
+  		redirect_to user_events_path
   	else
-  		flash[:error] = "Error: #{@event.errors.full_messages.to_sentence}"
-		  #redirect_to new_event_path
+  		flash.now[:error] = "Error: #{@event.errors.full_messages.to_sentence}"
+		  render :new
   	end	
   end
 
@@ -37,12 +37,8 @@ class EventsController < ApplicationController
       redirect_to user_events_path
     else
       flash[:error] = "Error: #{@event.errors.full_messages.to_sentence}"
-      #redirect_to new_event_path
+      redirect_to user_events_path 
     end 
-  end
-
-  def edit
-   
   end
 
   def update
@@ -54,7 +50,8 @@ class EventsController < ApplicationController
       flash[:success] = "Create event success"
       redirect_to root_path
     else
-      flash[:error] = "Error: #{@event.errors.full_messages.to_sentence}"
+      flash.now[:error] = "Error: #{@event.errors.full_messages.to_sentence}"
+      render :edit
     end
   end
 
