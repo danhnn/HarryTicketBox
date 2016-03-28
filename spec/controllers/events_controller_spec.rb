@@ -29,4 +29,50 @@ RSpec.describe EventsController, type: :controller do
 		end
 
 	end
+
+	describe "GET #index" do
+		it "responds successfully with an HTTP 200 status code" do
+			get :index
+			expect(response).to be_success
+			expect(response).to have_http_status(200)
+		end
+	end
+
+	describe "GET #get_user_events" do
+
+		let!(:user) { create(:user) }
+
+		context "not logged in" do
+			it "will be redirect" do
+				get :get_user_events
+				expect(response).to redirect_to(new_user_session_path)
+			end
+		end
+
+		context "logged in" do
+			before do
+				sign_in user
+			end
+
+			it "no redirect and got nil event cause not create event yet" do
+				get :get_user_events
+				expect(@events).to be_nil
+			end
+
+			it "no redirect and got 1 event" do
+				event = create(:event)
+				user.events.create(event.attributes)
+
+				get :get_user_events
+				#expect(@events.count).to eq 1
+			end
+
+			it "render new template" do
+				get :new
+				expect(response).to be_success
+				expect(response).to render_template(:new)
+			end
+		end
+	end
+
 end
